@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Trainingsschema Invoer met Gewicht</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            overflow-x: auto;
+            display: block;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: center;
+            padding: 8px;
+            white-space: nowrap;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        h2 {
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px;
+            border-radius: 5px;
+        }
+        #exerciseContent {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        #mainContent {
+            display: block;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="number"], button {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        button.return {
+            background-color: #f44336;
+        }
+        button.return:hover {
+            background-color: #e53935;
+        }
+        @media screen and (max-width: 600px) {
+            th, td {
+                font-size: 12px;
+            }
+            input[type="number"], button {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1>Trainingsschema Invoer</h1>
+<p>Klik op de naam van een oefening om naar het invoerblad te gaan voor het instellen van het gewicht.</p>
+
+<div id="mainContent">
+<h2>Dag A - Borst & Schouders</h2><div style='overflow-x: auto;'><table><tr><th>Oefening</th><th>Herhalingen</th><th>Sets</th><th>Rusttijd</th><th>Instellen</th></tr><tr><td>Bench Press</td><td>5-8</td><td>4</td><td>3-5 min</td><td><button onclick="showExerciseInput('Bench Press')">Instellen</button></td></tr><tr><td>Overhead Press</td><td>6-8</td><td>3</td><td>2-3 min</td><td><button onclick="showExerciseInput('Overhead Press')">Instellen</button></td></tr><tr><td>Squat</td><td>8-10</td><td>3</td><td>3-4 min</td><td><button onclick="showExerciseInput('Squat')">Instellen</button></td></tr><tr><td>Mid Rows (Machine)</td><td>10-12</td><td>3</td><td>60-90 sec</td><td><button onclick="showExerciseInput('Mid Rows (Machine)')">Instellen</button></td></tr><tr><td>Dumbbell Lateral Raises</td><td>12-15</td><td>3</td><td>60-90 sec</td><td><button onclick="showExerciseInput('Dumbbell Lateral Raises')">Instellen</button></td></tr><tr><td>Leg Curls</td><td>10-12</td><td>3</td><td>60-90 sec</td><td><button onclick="showExerciseInput('Leg Curls')">Instellen</button></td></tr><tr><td>Ab Pulldown met Rope (Cable)</td><td>12-15</td><td>3</td><td>60 sec</td><td><button onclick="showExerciseInput('Ab Pulldown met Rope (Cable)')">Instellen</button></td></tr></table></div><h2>Dag B - Benen</h2><div style='overflow-x: auto;'><table><tr><th>Oefening</th><th>Herhalingen</th><th>Sets</th><th>Rusttijd</th><th>Instellen</th></tr><tr><td>Squat</td><td>5-8</td><td>4</td><td>3-5 min</td><td><button onclick="showExerciseInput('Squat')">Instellen</button></td></tr><tr><td>Romanian Deadlift</td><td>8-10</td><td>3</td><td>2-3 min</td><td><button onclick="showExerciseInput('Romanian Deadlift')">Instellen</button></td></tr><tr><td>Dumbbell Bench Press</td><td>8-10</td><td>3</td><td>2-3 min</td><td><button onclick="showExerciseInput('Dumbbell Bench Press')">Instellen</button></td></tr><tr><td>T-Bar Bent Over Row</td><td>6-8</td><td>3</td><td>2-3 min</td><td><button onclick="showExerciseInput('T-Bar Bent Over Row')">Instellen</button></td></tr><tr><td>Seated Dumbbell Shoulder Press</td><td>10-12</td><td>3</td><td>60-90 sec</td><td><button onclick="showExerciseInput('Seated Dumbbell Shoulder Press')">Instellen</button></td></tr><tr><td>Tricep Extensions (Cable)</td><td>10-12</td><td>3</td><td>60-90 sec</td><td><button onclick="showExerciseInput('Tricep Extensions (Cable)')">Instellen</button></td></tr><tr><td>Ab Crunch (Machine)</td><td>12-15</td><td>3</td><td>60 sec</td><td><button onclick="showExerciseInput('Ab Crunch (Machine)')">Instellen</button></td></tr></table></div><h2>Dag C - Rug</h2><div style='overflow-x: auto;'><table><tr><th>Oefening</th><th>Herhalingen</th><th>Sets</th><th>Rusttijd</th><th>Instellen</th></tr><tr><td>Deadlift</td><td>4-6</td><td>4</td><td>3-5 min</td><td><button onclick="showExerciseInput('Deadlift')">Instellen</button></td></tr><tr><td>Lat Pulldown met Brede Grip</td><td>6-8</td><td>3</td><td>2-3 min</td><td><button onclick="showExerciseInput('Lat Pulldown met Brede Grip')">Instellen</button></td></tr><tr><td>Leg Press</td><td>10-12</td><td>3</td><td>2-3 min</td><td><button onclick="showExerciseInput('Leg Press')">Instellen</button></td></tr><tr><td>Incline Bench Press</td><td>8-10</td><td>3</td><td>2-3 min</td><td><button onclick="showExerciseInput('Incline Bench Press')">Instellen</button></td></tr><tr><td>Face Pulls</td><td>12-15</td><td>3</td><td>60-90 sec</td><td><button onclick="showExerciseInput('Face Pulls')">Instellen</button></td></tr><tr><td>Barbell Curl</td><td>10-12</td><td>3</td><td>60-90 sec</td><td><button onclick="showExerciseInput('Barbell Curl')">Instellen</button></td></tr><tr><td>Hanging Leg Raise</td><td>10-15</td><td>3</td><td>60 sec</td><td><button onclick="showExerciseInput('Hanging Leg Raise')">Instellen</button></td></tr></table></div>
+</div>
+
+<div id="exerciseContent">
+    <button class="return" onclick="goBack()">Terug naar Overzicht</button>
+    <h2 id="exerciseTitle"></h2>
+    <label for="startWeight">Startgewicht (kg):</label>
+    <input type="number" id="startWeight" name="startWeight" step="0.5" min="0" placeholder="Startgewicht">
+
+    <label for="increaseWeight">Gewichtsverhoging (kg):</label>
+    <input type="number" id="increaseWeight" name="increaseWeight" step="0.5" min="0" placeholder="Gewichtsverhoging">
+
+    <label for="increaseCondition">Verhoog gewicht na:</label>
+    <input type="number" id="increaseCondition" name="increaseCondition" step="1" min="1" placeholder="Aantal keer max reps gehaald">
+
+    <br><br>
+    <button onclick="saveSettings()">Instellingen opslaan</button>
+</div>
+
+<script>
+    function showExerciseInput(exerciseName) {
+        document.getElementById("mainContent").style.display = "none";
+        document.getElementById("exerciseContent").style.display = "block";
+        document.getElementById("exerciseTitle").innerText = exerciseName;
+    }
+
+    function goBack() {
+        document.getElementById("mainContent").style.display = "block";
+        document.getElementById("exerciseContent").style.display = "none";
+        document.getElementById("exerciseTitle").innerText = "";
+        document.getElementById('startWeight').value = '';
+        document.getElementById('increaseWeight').value = '';
+        document.getElementById('increaseCondition').value = '';
+    }
+
+    function saveSettings() {
+        const startWeight = document.getElementById('startWeight').value;
+        const increaseWeight = document.getElementById('increaseWeight').value;
+        const increaseCondition = document.getElementById('increaseCondition').value;
+        
+        alert('Instellingen opgeslagen:\nStartgewicht: ' + startWeight + ' kg\nGewichtsverhoging: ' + increaseWeight + ' kg\nVerhoog gewicht na: ' + increaseCondition + ' keer max reps gehaald');
+    }
+</script>
+
+</body>
+</html>
